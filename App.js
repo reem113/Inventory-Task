@@ -2,7 +2,7 @@
 import 'react-native-gesture-handler';
 
 import React from 'react';
-import { Button, StyleSheet } from 'react-native';
+import { Text, View, StyleSheet } from 'react-native';
 
 import { createNativeStackNavigator } from '@react-navigation/native-stack' //Insert screens into a stack
 import { NavigationContainer, DefaultTheme } from '@react-navigation/native'; //contains navigator and screen
@@ -11,8 +11,8 @@ import HomeScreen from './src/Screens/HomeScreen';
 import SearchScreen from './src/Screens/SearchScreen';
 import DetailsScreen from './src/Screens/DetailsScreen';
 
-// import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
-// import Icon from 'react-native-vector-icons/FontAwesome';
+import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
+import Process from './src/components/icons/process';
 
 const Stack = createNativeStackNavigator();
 
@@ -37,14 +37,16 @@ const App = () => {
           name="Home"
           component={HomeScreen}
           options={({ navigation }) => ({
-            // headerLeft: () => <Icon name="rocket" size={30} color="#900" onPress={navigation.goBack()} />,
+            headerLeft: () => <FontAwesome5 style={styles.icon} name={'arrow-alt-circle-left'} size={20} color="#4e4e4e" />,
             title: 'Picture',
             headerTitleStyle: {
               fontFamily: 'sans-serif',
               fontWeight: 'bold',
               fontSize: 26,
             },
-            headerRight: () => <Button title='go'></Button>
+            headerRight: () => {
+              <Process />
+            }
           })}
         />
         <Stack.Screen
@@ -79,7 +81,12 @@ const App = () => {
   );
 }
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+  icon: {
+    marginRight: 5
+
+  }
+})
 
 export default App;
 

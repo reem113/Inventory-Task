@@ -13,13 +13,16 @@ const HomeScreen = ({ navigation }) => {
             <View style={styles.container}>
                 <Pressable style={{ marginVertical: 10 }} >
 
-                    <HomeButtonDetail buttonText="Asset Inventory" />
+                    <HomeButtonDetail buttonText="Asset Inventory"
+                        iconName={"warehouse"} />
                 </Pressable>
                 <Pressable onPress={() => navigation.navigate('Search')}>
-                    <HomeButtonDetail buttonText="Model" />
+                    <HomeButtonDetail buttonText="Model"
+                        iconName={"universal-access"} />
                 </Pressable>
                 <Pressable style={{ marginTop: 10 }}>
-                    <HomeButtonDetail buttonText="Person" />
+                    <HomeButtonDetail buttonText="Person"
+                        iconName={"user-check"} />
                 </Pressable>
 
             </View>

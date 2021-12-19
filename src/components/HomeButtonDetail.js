@@ -3,9 +3,10 @@ import { View, Text, StyleSheet } from 'react-native';
 
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 
-const HomeButtonDetail = ({ buttonText }) => {
+const HomeButtonDetail = ({ buttonText, iconName }) => {
     return (
         <View style={styles.container}>
+            <FontAwesome5 name={iconName} size={18} color="#4e4e4e" />
             <Text style={styles.Text}>{buttonText}</Text>
             <FontAwesome5 style={styles.icon} name={'arrow-right'} size={20} color="#7AC692" />
         </View >

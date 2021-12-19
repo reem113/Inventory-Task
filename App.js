@@ -2,7 +2,7 @@
 import 'react-native-gesture-handler';
 
 import React from 'react';
-import { Text, View, StyleSheet } from 'react-native';
+import { Button, StyleSheet } from 'react-native';
 
 import { createNativeStackNavigator } from '@react-navigation/native-stack' //Insert screens into a stack
 import { NavigationContainer, DefaultTheme } from '@react-navigation/native'; //contains navigator and screen

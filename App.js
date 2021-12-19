@@ -13,6 +13,7 @@ import DetailsScreen from './src/Screens/DetailsScreen';
 
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import Process from './src/components/icons/process';
+import Edit from './src/components/icons/edit';
 
 const Stack = createNativeStackNavigator();
 
@@ -53,7 +54,7 @@ const App = () => {
           name="Search"
           component={SearchScreen}
           options={({ navigation }) => ({
-            headerLeft: () => <Button title='back'></Button>,
+            headerLeft: () => <FontAwesome5 style={styles.icon} name={'arrow-alt-circle-left'} size={20} color="#4e4e4e" />,
             title: 'Model',
             headerTitleStyle: {
               fontFamily: 'sans-serif',
@@ -66,14 +67,14 @@ const App = () => {
           name="Details"
           component={DetailsScreen}
           options={({ navigation }) => ({
-            // headerLeft: () => <Button title='back' onPress={navigation.goBack()}></Button>,
+            headerLeft: () => <FontAwesome5 style={styles.icon} name={'arrow-alt-circle-left'} size={20} color="#4e4e4e" />,
             title: 'Model Details',
             headerTitleStyle: {
               fontFamily: 'sans-serif',
               fontWeight: 'bold',
               fontSize: 26,
             },
-            headerRight: () => <Button title='edit'></Button>
+            headerRight: () => <Edit />
           })}
         />
       </Stack.Navigator>

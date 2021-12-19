@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, TextInput, StyleSheet } from 'react-native';
 
+
 const SearchBar = ({ term, onTermChange }) => {
     return (
         <View style={styles.container}>
@@ -14,6 +15,7 @@ const SearchBar = ({ term, onTermChange }) => {
                 placeholderTextColor="#B4B4B4"
 
             />
+
         </View>
     );
 }
@@ -25,8 +27,10 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         borderRadius: 50,
         flexDirection: 'row',
+        justifyContent: 'space-between',
         marginHorizontal: 30,
-        marginVertical: 10
+        marginVertical: 10,
+
     },
     searchStyle: {
         flex: 1,
@@ -35,7 +39,7 @@ const styles = StyleSheet.create({
         fontFamily: 'sans-serif',
         padding: 15,
 
-    }
+    },
 })
 
 export default SearchBar;

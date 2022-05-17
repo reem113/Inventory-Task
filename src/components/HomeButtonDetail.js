@@ -8,7 +8,7 @@ const HomeButtonDetail = ({ buttonText, iconName }) => {
         <View style={styles.container}>
             <FontAwesome5 name={iconName} size={18} color="#4e4e4e" />
             <Text style={styles.Text}>{buttonText}</Text>
-            <FontAwesome5 style={styles.icon} name={'arrow-right'} size={20} color="#7AC692" />
+            <FontAwesome5 name={'arrow-right'} size={20} color="#7AC692" />
         </View >
     );
 }

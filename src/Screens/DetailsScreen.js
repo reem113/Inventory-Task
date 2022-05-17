@@ -6,7 +6,8 @@ import { ScrollView } from 'react-native-gesture-handler';
 import ModelDetails from '../components/DetailsComponent/ModelDetails';
 import Notes from '../components/NotesComponent/Notes';
 
-const DetailsScreen = () => {
+const DetailsScreen = ({ navigation }) => {
+    // const id = navigation.getParam('id');
     return (
         <ScrollView>
             <View style={styles.container}>

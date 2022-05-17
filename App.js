@@ -2,7 +2,7 @@
 import 'react-native-gesture-handler';
 
 import React from 'react';
-import { Button, StyleSheet } from 'react-native';
+import { StyleSheet } from 'react-native';
 
 import { createNativeStackNavigator } from '@react-navigation/native-stack' //Insert screens into a stack
 import { NavigationContainer, DefaultTheme } from '@react-navigation/native'; //contains navigator and screen
@@ -10,10 +10,11 @@ import { NavigationContainer, DefaultTheme } from '@react-navigation/native'; //
 import HomeScreen from './src/Screens/HomeScreen';
 import SearchScreen from './src/Screens/SearchScreen';
 import DetailsScreen from './src/Screens/DetailsScreen';
-
-import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import Process from './src/components/icons/process';
 import Edit from './src/components/icons/edit';
+
+import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
+
 
 const Stack = createNativeStackNavigator();
 
@@ -37,7 +38,7 @@ const App = () => {
         <Stack.Screen
           name="Home"
           component={HomeScreen}
-          options={({ navigation }) => ({
+          options={() => ({
             headerLeft: () => <FontAwesome5 style={styles.icon} name={'arrow-alt-circle-left'} size={20} color="#4e4e4e" />,
             title: 'Picture',
             headerTitleStyle: {
@@ -45,15 +46,15 @@ const App = () => {
               fontWeight: 'bold',
               fontSize: 26,
             },
-            headerRight: () => {
+            headerRight: () =>
               <Process />
-            }
+
           })}
         />
         <Stack.Screen
           name="Search"
           component={SearchScreen}
-          options={({ navigation }) => ({
+          options={() => ({
             headerLeft: () => <FontAwesome5 style={styles.icon} name={'arrow-alt-circle-left'} size={20} color="#4e4e4e" />,
             title: 'Model',
             headerTitleStyle: {

@@ -35,4 +35,4 @@ To Start Server:
 
 ##Technologies Used:
 
-React Native, redux, CSS3
+React Native, react-navigation, CSS3
